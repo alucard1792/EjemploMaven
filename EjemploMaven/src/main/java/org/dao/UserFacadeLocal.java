@@ -30,4 +30,6 @@ public interface UserFacadeLocal {
 
     int count();
     
+    User validateUser(String name, String password);
+    
 }

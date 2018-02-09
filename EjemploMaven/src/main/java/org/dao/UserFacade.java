@@ -8,6 +8,8 @@ package org.dao;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 import org.dto.User;
 
 /**
@@ -27,6 +29,23 @@ public class UserFacade extends AbstractFacade<User> implements UserFacadeLocal 
 
     public UserFacade() {
         super(User.class);
+    }
+
+    @Override
+    public User validateUser(String name, String password) {
+        User user = null;
+        
+        try {
+            TypedQuery<User> q = getEntityManager().createNamedQuery("User.login", User.class);
+            q.setParameter("name", name);
+            q.setParameter("password", password);
+            user = q.getSingleResult();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return user;
+        
     }
     
 }
