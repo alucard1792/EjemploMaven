@@ -1,0 +1,9 @@
+org\dao\UserFacadeLocal.class
+org\dto\Rol_.class
+org\dto\User.class
+org\dao\RolFacade.class
+org\dto\Rol.class
+org\dao\UserFacade.class
+org\dto\User_.class
+org\dao\AbstractFacade.class
+org\dao\RolFacadeLocal.class

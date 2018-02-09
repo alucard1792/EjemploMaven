@@ -1,0 +1,18 @@
+package org.dto;
+
+import javax.annotation.Generated;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+import org.dto.Rol;
+
+@Generated(value="EclipseLink-2.5.2.v20140319-rNA", date="2018-02-09T13:28:54")
+@StaticMetamodel(User.class)
+public class User_ { 
+
+    public static volatile SingularAttribute<User, String> password;
+    public static volatile SingularAttribute<User, String> name;
+    public static volatile SingularAttribute<User, Integer> id;
+    public static volatile SingularAttribute<User, Rol> rolsIdRol;
+    public static volatile SingularAttribute<User, Integer> status;
+
+}
