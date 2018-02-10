@@ -28,7 +28,7 @@
             </div>
         </div>
 
-        <h:form id="form-login">
+        <h:form id="form-login" prependId="false">
             <div class="page-content container">
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
@@ -36,8 +36,8 @@
                             <div class="box">
                                 <div class="content-wrap">
                                     <h6>Sign In</h6>
-                                    <h:inputText id="name" a:name="name" class="form-control" value="#{login.name}" a:type="text" a:placeholder="Name"></h:inputText>
-                                    <h:inputText id="password" a:name="password"  class="form-control" value="#{login.password}" a:type="password" a:placeholder="Password"></h:inputText>
+                                    <h:inputText id="name" class="form-control" value="#{login.name}" a:type="text" a:placeholder="name" a:name="name"></h:inputText>
+                                    <h:inputText id="password" class="form-control" value="#{login.password}" a:type="password" a:placeholder="password" a:name="password"></h:inputText>
                                     <div class="action">
                                         <h:commandButton class="btn btn-primary signup" action="#{login.validateUser()}" value="Login"></h:commandButton>
                                     </div>                

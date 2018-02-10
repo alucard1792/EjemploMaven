@@ -39,6 +39,7 @@ public class UserFacade extends AbstractFacade<User> implements UserFacadeLocal 
             TypedQuery<User> q = getEntityManager().createNamedQuery("User.login", User.class);
             q.setParameter("name", name);
             q.setParameter("password", password);
+            System.out.println(password);
             user = q.getSingleResult();
         } catch (Exception e) {
             e.printStackTrace();

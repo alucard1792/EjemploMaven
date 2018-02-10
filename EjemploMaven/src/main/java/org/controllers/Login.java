@@ -42,6 +42,7 @@ public class Login implements Serializable {
     }
 
     public String validateUser() {
+        System.out.println(password);
         user = userFacadeLocal.validateUser(name, password);
         if (user != null) {
             return "dashboard/index.xhtm?faces-redirect=true";
